@@ -4,14 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+// import {
+//   Select,
+//   SelectContent,
+//   SelectGroup,
+//   SelectItem,
+//   SelectTrigger,
+//   SelectValue,
+// } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
@@ -119,15 +119,6 @@ const handleSubmit = () => {
                   v-model="contactForm.firstName"
                 />
               </div>
-              <div class="flex-1 flex flex-col gap-1.5">
-                <Label for="last-name">Last Name</Label>
-                <Input
-                  id="last-name"
-                  type="text"
-                  placeholder="Your last name"
-                  v-model="contactForm.lastName"
-                />
-              </div>
             </div>
 
             <div class="flex flex-col gap-1.5">
@@ -140,7 +131,7 @@ const handleSubmit = () => {
               />
             </div>
 
-            <div class="flex flex-col gap-1.5">
+            <!-- <div class="flex flex-col gap-1.5">
               <Label for="subject">Subject</Label>
               <Select v-model="contactForm.subject">
                 <SelectTrigger>
@@ -157,7 +148,7 @@ const handleSubmit = () => {
                   </SelectGroup>
                 </SelectContent>
               </Select>
-            </div>
+            </div> -->
 
             <div class="flex flex-col gap-1.5">
               <Label for="message">Message</Label>

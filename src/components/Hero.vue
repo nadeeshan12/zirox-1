@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import { Badge } from "@/components/ui/badge";
+// import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-vue-next";
 </script>
@@ -10,9 +10,9 @@ import { ArrowRight } from "lucide-vue-next";
     <div class="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-20 md:py-32">
       <div class="text-center space-y-8">
         <!-- Company Badge -->
-        <Badge variant="outline" class="text-sm py-2 text-blue-600 border-blue-600">
+        <!-- <Badge variant="outline" class="text-sm py-2 text-blue-600 border-blue-600">
           Outsource IT Company
-        </Badge>
+        </Badge> -->
 
         <!-- Main Headline -->
         <div class="max-w-screen-md mx-auto text-center text-5xl md:text-6xl font-bold">
