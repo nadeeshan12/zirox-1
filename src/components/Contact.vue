@@ -105,7 +105,7 @@ const handleSubmit = () => {
 
       <!-- Contact Form -->
       <Card class="bg-muted/50 dark:bg-card">
-        <CardHeader class="text-2xl text-white">Send Us a Message</CardHeader>
+        <CardHeader class="text-2xl text-blue">Send Us a Message</CardHeader>
 
         <CardContent>
           <form @submit.prevent="handleSubmit" class="grid gap-4">
