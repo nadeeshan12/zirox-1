@@ -40,8 +40,8 @@ const isOpen = ref(false);
 <template>
   <header
     :class="{
-      'shadow-light': mode.value === 'light',
-      'shadow-dark':  mode.value === 'dark',
+      'shadow-light': mode === 'light',
+      'shadow-dark':  mode === 'dark',
       'w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border z-40 rounded-2xl flex justify-between items-center p-4 bg-card shadow-md': true
     }"
   >
@@ -121,7 +121,7 @@ const isOpen = ref(false);
     <!-- Actions -->
     <div class="hidden lg:flex items-center space-x-4">
       <ToggleTheme />
-      <Button as-child size="sm" variant="solid">
+      <Button as-child size="sm" variant="default" class="font-bold px-6 py-3 group/arrow bg-blue-600 hover:bg-blue-400">
         <a href="#contact">Get in Touch</a>
       </Button>
     </div>
