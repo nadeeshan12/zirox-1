@@ -1,105 +1,91 @@
 <script setup lang="ts">
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
 import {
   Sparkle,
-  Tag,
   Paintbrush,
   Blocks,
   LineChart,
-  Wallet,
+  Cloud,
 } from "lucide-vue-next";
 
-interface BenefitsProps {
+interface ServiceProps {
   icon: string;
   title: string;
   description: string;
 }
 
-const benefitList: BenefitsProps[] = [
+const serviceList: ServiceProps[] = [
   {
     icon: "blocks",
-    title: "Build Brand Trust",
+    title: "Custom Software Development",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      "Tailored software solutions built to your exact specifications—web, mobile, and desktop applications.",
   },
   {
-    icon: "lineChart",
-    title: "More Leads",
+    icon: "cloud",
+    title: "Cloud & Infrastructure",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, natus consectetur.",
-  },
-  {
-    icon: "wallet",
-    title: "Higher Conversions",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consectetur. A odio velit cum aliquam",
+      "Scalable, secure cloud migrations and DevOps services to optimize your IT environment.",
   },
   {
     icon: "sparkle",
-    title: "Test Marketing Ideas",
+    title: "IT Consulting",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      "Expert technology strategy and architecture guidance to drive innovation and efficiency.",
+  },
+  {
+    icon: "lineChart",
+    title: "Data Analytics & BI",
+    description:
+      "Actionable insights through data visualization, reporting, and business intelligence solutions.",
   },
 ];
 
-const iconMap: Record<
-  string,
-  | typeof Sparkle
-  | typeof Tag
-  | typeof Paintbrush
-  | typeof Blocks
-  | typeof LineChart
-  | typeof Wallet
-> = {
+const iconMap: Record<string, any> = {
   sparkle: Sparkle,
-  tag: Tag,
   paintbrush: Paintbrush,
   blocks: Blocks,
   lineChart: LineChart,
-  wallet: Wallet,
+  cloud: Cloud,
 };
 </script>
 
 <template>
   <section
-    id="benefits"
+    id="services"
     class="container py-24 sm:py-32"
   >
     <div class="grid lg:grid-cols-2 place-items-center lg:gap-24">
+      <!-- Intro -->
       <div>
-        <h2 class="text-lg text-primary mb-2 tracking-wider">Benefits</h2>
+        <h2 class="text-lg text-blue-600 mb-2 tracking-wider">Services</h2>
 
         <h2 class="text-3xl md:text-4xl font-bold mb-4">
-          Your Shortcut to Success
+          What We Offer
         </h2>
         <p class="text-xl text-muted-foreground mb-8">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non ducimus
-          reprehenderit architecto rerum similique facere odit deleniti
-          necessitatibus quo quae.
+          At GOTech, we deliver end-to-end IT solutions designed to accelerate your business growth and efficiency.
         </p>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-4 w-full">
+      <!-- Service Cards -->
+      <div class="grid lg:grid-cols-2 gap-6 w-full">
         <Card
-          v-for="({ icon, title, description }, index) in benefitList"
+          v-for="({ icon, title, description }, idx) in serviceList"
           :key="title"
-          class="bg-muted/50 dark:bg-card hover:bg-background dark:hover:bg-background transition-all delay-75 group/number"
+          class="bg-muted/50 dark:bg-card hover:bg-background dark:hover:bg-background transition-all"
         >
           <CardHeader>
-            <div class="flex justify-between">
+            <div class="flex justify-between items-center">
               <component
-                class="size-8 mb-6 text-primary"
                 :is="iconMap[icon]"
+                class="size-8 text-blue-600"
               />
-
-              <span
-                class="text-5xl text-muted-foreground/15 font-medium transition-all delay-75 group-hover/number:text-muted-foreground/30"
-                >0{{ index + 1 }}</span
-              >
+              <span class="text-5xl text-muted-foreground/20 font-medium">
+                0{{ idx + 1 }}
+              </span>
             </div>
-
-            <CardTitle>{{ title }}</CardTitle>
+            <CardTitle class="mt-2">{{ title }}</CardTitle>
           </CardHeader>
 
           <CardContent class="text-muted-foreground">

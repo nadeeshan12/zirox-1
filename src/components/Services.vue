@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import {
   Card,
-  CardDescription,
   CardHeader,
   CardTitle,
+  CardDescription,
 } from "@/components/ui/card";
-
 import { Badge } from "@/components/ui/badge";
 
 enum ProService {
@@ -21,26 +20,28 @@ interface ServiceProps {
 
 const serviceList: ServiceProps[] = [
   {
-    title: "Custom Domain Integration",
+    title: "Custom Software Development",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit adipisicing.",
-    pro: 0,
+      "Tailored web, mobile, and desktop applications built to your exact specifications.",
+    pro: ProService.NO,
   },
   {
-    title: "Social Media Integrations",
+    title: "Cloud & Infrastructure",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, dicta.",
-    pro: 0,
+      "Scalable, secure cloud migrations and DevOps automation to optimize your environment.",
+    pro: ProService.NO,
   },
   {
-    title: "Email Marketing Integrations",
-    description: "Lorem dolor sit amet adipisicing.",
-    pro: 0,
+    title: "IT Consulting",
+    description:
+      "Expert technology strategy and architecture guidance to drive innovation.",
+    pro: ProService.NO,
   },
   {
-    title: "SEO Optimization",
-    description: "Lorem ipsum dolor sit amet consectetur.",
-    pro: 1,
+    title: "Data Analytics & BI",
+    description:
+      "Actionable insights through dashboards, reporting, and business intelligence.",
+    pro: ProService.YES,
   },
 ];
 </script>
@@ -50,27 +51,24 @@ const serviceList: ServiceProps[] = [
     id="services"
     class="container py-24 sm:py-32"
   >
-    <h2 class="text-lg text-primary text-center mb-2 tracking-wider">
+    <!-- Heading -->
+    <h2 class="text-lg text-blue-600 text-center mb-2 tracking-wider">
       Services
     </h2>
-
     <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
-      Grow Your Business
+      Grow Your Business with GOTech
     </h2>
     <h3 class="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
-      From marketing and sales to operations and strategy, we have the expertise
-      to help you achieve your goals.
+      From development and cloud to consulting and analytics, we power your success.
     </h3>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
 
-    <div
-      class="grid sm:grid-cols-2 lg:grid-cols-2 gap-4 w-full lg:w-[60%] mx-auto"
-    >
+    <!-- Cards Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-6 w-full lg:w-[60%] mx-auto">
       <div
-        v-for="{ title, description, pro } in serviceList"
+        v-for="({ title, description, pro }) in serviceList"
         :key="title"
       >
-        <Card class="bg-muted/60 dark:bg-card h-full relative">
+        <Card class="bg-muted/50 dark:bg-card h-full relative hover:bg-background transition-all">
           <CardHeader>
             <CardTitle>{{ title }}</CardTitle>
             <CardDescription>{{ description }}</CardDescription>
@@ -78,9 +76,10 @@ const serviceList: ServiceProps[] = [
           <Badge
             v-if="pro === ProService.YES"
             variant="secondary"
-            class="absolute -top-2 -right-3"
-            >PRO</Badge
+            class="absolute -top-2 -right-3 bg-blue-600 text-white"
           >
+            PRO
+          </Badge>
         </Card>
       </div>
     </div>

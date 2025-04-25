@@ -1,81 +1,66 @@
 <script setup lang="ts">
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
 import {
-  Paintbrush,
-  MessageCircle,
   TabletSmartphone,
-  BadgeCheck,
+  Paintbrush,
   Goal,
-  PictureInPicture,
-  MousePointerClick,
+  BadgeCheck,
   Newspaper,
+  MessageCircle,
 } from "lucide-vue-next";
 
-interface FeaturesProps {
+interface FeatureProps {
   icon: string;
   title: string;
   description: string;
 }
 
-const featureList: FeaturesProps[] = [
+const featureList: FeatureProps[] = [
   {
     icon: "tabletSmartphone",
-    title: "Mobile Friendly",
+    title: "Cross-Platform Apps",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, consectetur.",
+      "Responsive web and mobile applications that run seamlessly on any device.",
   },
   {
-    icon: "badgeCheck",
-    title: "Social Proof",
+    icon: "paintbrush",
+    title: "UI/UX Excellence",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Natus consectetur, odio ea accusamus aperiam.",
+      "Intuitive, user-centric designs that drive engagement and satisfaction.",
   },
   {
     icon: "goal",
-    title: "Targeted Content",
+    title: "Agile Methodology",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. odio ea accusamus aperiam.",
+      "Iterative development for rapid delivery, continuous feedback, and flexibility.",
   },
   {
-    icon: "pictureInPicture",
-    title: "Strong Visuals",
+    icon: "badgeCheck",
+    title: "Quality Assurance",
     description:
-      "Lorem elit. A odio velit cum aliquam. Natus consectetur dolores, odio ea accusamus aperiam.",
-  },
-  {
-    icon: "mousePointerClick",
-    title: "Clear CTA",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing. odio ea accusamus consectetur.",
+      "Rigorous testing and code reviews to ensure reliability and performance.",
   },
   {
     icon: "newspaper",
-    title: "Clear Headline",
+    title: "Data Analytics & BI",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur.",
+      "Actionable insights via dashboards, reporting, and business intelligence solutions.",
+  },
+  {
+    icon: "messageCircle",
+    title: "24/7 Support",
+    description:
+      "Dedicated technical assistance to keep your systems running smoothly around the clock.",
   },
 ];
 
-const iconMap: Record<
-  string,
-  | typeof TabletSmartphone
-  | typeof BadgeCheck
-  | typeof Goal
-  | typeof PictureInPicture
-  | typeof Paintbrush
-  | typeof MousePointerClick
-  | typeof MessageCircle
-  | typeof Newspaper
-> = {
+const iconMap: Record<string, any> = {
   tabletSmartphone: TabletSmartphone,
-  badgeCheck: BadgeCheck,
-  goal: Goal,
-  pictureInPicture: PictureInPicture,
   paintbrush: Paintbrush,
-  mousePointerClick: MousePointerClick,
-  messageCircle: MessageCircle,
+  goal: Goal,
+  badgeCheck: BadgeCheck,
   newspaper: Newspaper,
+  messageCircle: MessageCircle,
 };
 </script>
 
@@ -84,39 +69,35 @@ const iconMap: Record<
     id="features"
     class="container py-24 sm:py-32"
   >
-    <h2 class="text-lg text-primary text-center mb-2 tracking-wider">
+    <h2 class="text-lg text-blue-600 text-center mb-2 tracking-wider">
       Features
     </h2>
 
     <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
-      What Makes Us Different
+      What Makes GOTech Different
     </h2>
 
     <h3 class="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
-      fugiat, odit similique quasi sint reiciendis quidem iure veritatis optio
-      facere tenetur.
+      We combine cutting-edge technology, design excellence, and round-the-clock support
+      to deliver solutions that truly power your business.
     </h3>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <div
-        v-for="{ icon, title, description } in featureList"
+        v-for="({ icon, title, description }) in featureList"
         :key="title"
       >
         <Card class="h-full bg-background border-0 shadow-none">
-          <CardHeader class="flex justify-center items-center">
+          <CardHeader class="flex flex-col items-center">
             <div
-              class="bg-primary/20 p-2 rounded-full ring-8 ring-primary/10 mb-4"
+              class="bg-blue-600/20 p-2 rounded-full ring-8 ring-blue-600/10 mb-4"
             >
               <component
                 :is="iconMap[icon]"
-                class="size-6 text-primary"
+                class="size-6 text-blue-600"
               />
             </div>
-
-            <CardTitle>
-              {{ title }}
-            </CardTitle>
+            <CardTitle class="text-center">{{ title }}</CardTitle>
           </CardHeader>
 
           <CardContent class="text-muted-foreground text-center">
@@ -127,5 +108,3 @@ const iconMap: Record<
     </div>
   </section>
 </template>
-
-<style lang="less" scoped></style>

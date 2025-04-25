@@ -20,31 +20,15 @@ interface sponsorsProps {
 const sponsors: sponsorsProps[] = [
   {
     icon: "crown",
-    name: "Acmebrand",
+    name: "DentX",
   },
   {
-    icon: "vegan",
-    name: "Acmelogo",
+    icon: "crown",
+    name: "ZEEP",
   },
   {
-    icon: "ghost",
-    name: "Acmesponsor",
-  },
-  {
-    icon: "puzzle",
-    name: "Acmeipsum",
-  },
-  {
-    icon: "squirrel",
-    name: "Acme",
-  },
-  {
-    icon: "cookie",
-    name: "Accmee",
-  },
-  {
-    icon: "drama",
-    name: "Acmetech",
+    icon: "crown",
+    name: "GGNetworks",
   },
 ];
 
@@ -71,9 +55,9 @@ const iconMap: Record<
 <template>
   <section
     id="sponsors"
-    class="max-w-[75%] mx-auto pb-24 sm:pb-32"
+    class="max-w-[30%] mx-auto pb-24 sm:pb-32"
   >
-    <h2 class="text-lg md:text-xl text-center mb-6">Our Platinum Sponsors</h2>
+    <h2 class="text-lg md:text-xl text-center mb-6">Our Projects</h2>
 
     <div class="mx-auto">
       <Marquee
