@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Code, Mail, Phone, Linkedin, Github } from "lucide-vue-next";
+import { Code, Mail, Linkedin, Github } from "lucide-vue-next";
 import Separator from "@/components/ui/separator/Separator.vue";
 </script>
 
