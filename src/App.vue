@@ -7,7 +7,7 @@ import Hero from "./components/Hero.vue";
 import Benefits from "./components/Benefits.vue";
 import Features from "./components/Features.vue";
 import Services from "./components/Services.vue";
-import Sponsors from "./components/Sponsors.vue";
+import Products from "./components/Products.vue";
 import Contact from "./components/Contact.vue";
 import Footer from "./components/Footer.vue";
 </script>
@@ -26,7 +26,7 @@ import Footer from "./components/Footer.vue";
   <div class="relative z-10">
     <Navbar />
     <Hero />
-    <Sponsors />
+    <Products />
     <Benefits />
     <Features />
     <Services />
