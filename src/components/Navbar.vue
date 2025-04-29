@@ -88,16 +88,13 @@ const isOpen = ref(false);
           </div>
 
           <SheetFooter class="flex flex-col items-start gap-4">
-            <!-- group the toggle in its own flex-row -->
             <div class="flex items-center space-x-2">
-              <!-- this forces the toggle icon + label to align center vertically -->
               <ToggleTheme />
             </div>
 
-            <!-- your contact link, also centered -->
             <Button as-child size="sm" variant="ghost" class="">
               <a href="#contact" class="flex items-center space-x-2">
-                <Mail class="w-5 h-5" />
+                <Mail class="w-5 h-5 mr-0.5" />
                 <span>Contact</span>
               </a>
             </Button>
