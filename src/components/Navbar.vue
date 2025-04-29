@@ -19,7 +19,6 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 import { Menu, Code, Mail } from "lucide-vue-next";
 import ToggleTheme from "./ToggleTheme.vue";
 
@@ -39,19 +38,18 @@ const isOpen = ref(false);
 
 <template>
   <header
-    :class="{
-      'shadow-light': mode === 'light',
-      'shadow-dark':  mode === 'dark',
-      'sticky top-5 z-40 mx-auto w-[50%] md:w-[40%] lg:w-[40%] lg:max-w-screen-xl rounded-2xl flex justify-between items-center p-4 bg-white/30 dark:bg-black/30 backdrop-blur-sm border border-white/20 dark:border-black/20':
-        true
-    }"
+  :class="[
+    'sticky top-5 z-40 mx-auto flex w-fit items-center justify-between whitespace-nowrap gap-8 lg:gap-4',
+    'p-4 rounded-2xl bg-white/30 dark:bg-black/30 backdrop-blur-sm border border-white/20 dark:border-black/20',
+    mode === 'light' ? 'shadow-light' : 'shadow-dark'
+  ]"
   >
     <!-- Logo / Brand -->
     <a href="/" class="font-bold text-lg flex items-center">
       <Code
         class="bg-gradient-to-tr from-blue-600 via-blue-500 to-teal-400 p-2 rounded-lg w-9 h-9 mr-2 text-white"
       />
-      GOTech
+      GoTech
     </a>
 
     <!-- Mobile Menu -->
@@ -71,7 +69,7 @@ const isOpen = ref(false);
                 <Code
                   class="bg-gradient-to-tr from-blue-600 via-blue-500 to-teal-400 p-2 rounded-lg w-9 h-9 mr-2 text-white"
                 />
-                GOTech
+                GoTech
               </SheetTitle>
             </SheetHeader>
 
@@ -89,13 +87,18 @@ const isOpen = ref(false);
             </div>
           </div>
 
-          <SheetFooter class="flex-col justify-start items-start">
-            <Separator class="mb-2" />
-            <ToggleTheme />
-            <Button as-child size="sm" variant="ghost" class="mt-2">
-              <a href="#contact" class="flex items-center">
-                <Mail class="w-5 h-5 mr-2" />
-                Contact
+          <SheetFooter class="flex flex-col items-start gap-4">
+            <!-- group the toggle in its own flex-row -->
+            <div class="flex items-center space-x-2">
+              <!-- this forces the toggle icon + label to align center vertically -->
+              <ToggleTheme />
+            </div>
+
+            <!-- your contact link, also centered -->
+            <Button as-child size="sm" variant="ghost" class="">
+              <a href="#contact" class="flex items-center space-x-2">
+                <Mail class="w-5 h-5" />
+                <span>Contact</span>
               </a>
             </Button>
           </SheetFooter>
