@@ -2,6 +2,16 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-vue-next";
+
+import { onMounted } from 'vue'
+
+// Load ElevenLabs widget script on component mount
+onMounted(() => {
+  const script = document.createElement('script')
+  script.src = 'https://elevenlabs.io/convai-widget/index.js'
+  script.async = true
+  document.head.appendChild(script)
+})
 </script>
 
 <template>
@@ -48,6 +58,9 @@ import { ArrowRight } from "lucide-vue-next";
               Our Services
             </a>
           </Button>
+        </div>
+        <div class="mt-8">
+          <elevenlabs-convai agent-id="C5qQdrOXxzhgtoBLFFv0"></elevenlabs-convai>
         </div>
       </div>
     </div>
