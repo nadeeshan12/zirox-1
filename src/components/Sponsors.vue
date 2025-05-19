@@ -2,70 +2,53 @@
 import { Marquee } from "@selemondev/vue3-marquee";
 import "@selemondev/vue3-marquee/dist/style.css";
 
-import {
-  Crown,
-  Vegan,
-  Ghost,
-  Puzzle,
-  Squirrel,
-  Cookie,
-  Drama,
-} from "lucide-vue-next";
+// import {
+//   Crown,
+//   Vegan,
+//   Ghost,
+//   Puzzle,
+//   Squirrel,
+//   Cookie,
+//   Drama,
+// } from "lucide-vue-next";
 
 interface sponsorsProps {
-  icon: string;
+  image: string;
   name: string;
 }
 
 const sponsors: sponsorsProps[] = [
   {
-    icon: "crown",
-    name: "Acmebrand",
+    image: "../../../public/homem.webp",
+    name: "Homem",
   },
   {
-    icon: "vegan",
+    image: "/images/sponsors/acmelogo.png",
     name: "Acmelogo",
   },
   {
-    icon: "ghost",
+    image: "../../../public/homem.webp",
     name: "Acmesponsor",
   },
   {
-    icon: "puzzle",
+    image: "/images/sponsors/acmeipsum.png",
     name: "Acmeipsum",
   },
   {
-    icon: "squirrel",
+    image: "/images/sponsors/acme.png",
     name: "Acme",
   },
   {
-    icon: "cookie",
+    image: "/images/sponsors/accmee.png",
     name: "Accmee",
   },
   {
-    icon: "drama",
+    image: "/images/sponsors/acmetech.png",
     name: "Acmetech",
   },
 ];
 
-const iconMap: Record<
-  string,
-  | typeof Crown
-  | typeof Vegan
-  | typeof Ghost
-  | typeof Puzzle
-  | typeof Squirrel
-  | typeof Cookie
-  | typeof Drama
-> = {
-  crown: Crown,
-  vegan: Vegan,
-  ghost: Ghost,
-  puzzle: Puzzle,
-  squirrel: Squirrel,
-  cookie: Cookie,
-  drama: Drama,
-};
+
 </script>
 
 <template>
@@ -83,14 +66,14 @@ const iconMap: Record<
         innerClassName="gap-[3rem]"
       >
         <div
-          v-for="{ icon, name } in sponsors"
+          v-for="{ image, name } in sponsors"
           :key="name"
         >
           <div class="flex items-center text-xl md:text-2xl font-medium">
-            <component
-              :is="iconMap[icon]"
-              class="mr-2"
-              stroke-width="3"
+            <img
+              :src="image"
+              :alt="name"
+              class="w-8 h-8 mr-2 object-contain"
             />
             {{ name }}
           </div>
@@ -99,3 +82,4 @@ const iconMap: Record<
     </div>
   </section>
 </template>
+

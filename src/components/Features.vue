@@ -21,40 +21,28 @@ interface FeaturesProps {
 const featureList: FeaturesProps[] = [
   {
     icon: "tabletSmartphone",
-    title: "Mobile Friendly",
+    title: "Flexibilidade",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, consectetur.",
+      "Estude a qualquer hora e em qualquer lugar.",
   },
-  {
-    icon: "badgeCheck",
-    title: "Social Proof",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Natus consectetur, odio ea accusamus aperiam.",
-  },
+  // {
+  //   icon: "badgeCheck",
+  //   title: "Praticidade",
+  //   description:
+  //     "Plataforma simples e fácil.",
+  // },
   {
     icon: "goal",
-    title: "Targeted Content",
+    title: "Acompanhamento",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. odio ea accusamus aperiam.",
+      "Tenha acesso ao nosso suporte premium.",
   },
   {
     icon: "pictureInPicture",
-    title: "Strong Visuals",
+    title: "Reconhecimento",
     description:
-      "Lorem elit. A odio velit cum aliquam. Natus consectetur dolores, odio ea accusamus aperiam.",
-  },
-  {
-    icon: "mousePointerClick",
-    title: "Clear CTA",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing. odio ea accusamus consectetur.",
-  },
-  {
-    icon: "newspaper",
-    title: "Clear Headline",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur.",
-  },
+      "Diploma com validade Nacional.",
+  }
 ];
 
 const iconMap: Record<
@@ -85,17 +73,15 @@ const iconMap: Record<
     class="container py-24 sm:py-32"
   >
     <h2 class="text-lg text-primary text-center mb-2 tracking-wider">
-      Features
+      Opotunidade
     </h2>
 
     <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
-      What Makes Us Different
+      Você está a um passo do seu diploma
     </h2>
 
     <h3 class="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
-      fugiat, odit similique quasi sint reiciendis quidem iure veritatis optio
-      facere tenetur.
+      Conheça as principais vantagens do programa
     </h3>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">

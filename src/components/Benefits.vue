@@ -19,27 +19,27 @@ interface BenefitsProps {
 const benefitList: BenefitsProps[] = [
   {
     icon: "blocks",
-    title: "Build Brand Trust",
+    title: "Experiência",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      "Mais de 10.000 alunos já estão usufruindo da sua Formação",
   },
   {
     icon: "lineChart",
-    title: "More Leads",
+    title: "98% de aprovação",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, natus consectetur.",
+      "Nossa metodologia garante o seu sucesso.",
   },
   {
     icon: "wallet",
-    title: "Higher Conversions",
+    title: "Diploma Reconhecido",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consectetur. A odio velit cum aliquam",
+      "Diploma 100% reconhecido pelo MEC",
   },
   {
     icon: "sparkle",
-    title: "Test Marketing Ideas",
+    title: "Conclusão Rápida",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      "Conclua seus estudos em apenas 3 meses.",
   },
 ];
 
@@ -68,15 +68,13 @@ const iconMap: Record<
   >
     <div class="grid lg:grid-cols-2 place-items-center lg:gap-24">
       <div>
-        <h2 class="text-lg text-primary mb-2 tracking-wider">Benefits</h2>
+        <h2 class="text-lg text-primary mb-2 tracking-wider">Melhor Opção</h2>
 
         <h2 class="text-3xl md:text-4xl font-bold mb-4">
-          Your Shortcut to Success
+          EJA EAD
         </h2>
         <p class="text-xl text-muted-foreground mb-8">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non ducimus
-          reprehenderit architecto rerum similique facere odit deleniti
-          necessitatibus quo quae.
+          O EJA EAD foi feito justamente para pessoas como você, que querem dar esse passo, mas precisam de praticidade, acolhimento e um empurrãozinho.
         </p>
       </div>
 

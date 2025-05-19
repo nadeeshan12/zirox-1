@@ -3,7 +3,7 @@ import { ref } from "vue";
 
 import { useColorMode } from "@vueuse/core";
 const mode = useColorMode();
-mode.value = "dark";
+mode.value = "light";
 
 import {
   NavigationMenu,
@@ -83,7 +83,7 @@ const isOpen = ref<boolean>(false);
     :class="{
       'shadow-light': mode === 'light',
       'shadow-dark': mode === 'dark',
-      'w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border z-40 rounded-2xl flex justify-between items-center p-2 bg-card shadow-md': true,
+      'w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-2 mx-auto sticky border z-40 rounded-2xl flex justify-between items-center p-2 bg-card shadow-md': true,
     }"
   >
     <a
@@ -93,7 +93,7 @@ const isOpen = ref<boolean>(false);
       <ChevronsDown
         class="bg-gradient-to-tr from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white"
       />
-      ShadcnVue</a
+      Ensino Médio Rápido</a
     >
     <!-- Mobile -->
     <div class="flex items-center lg:hidden">
